@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gourav | Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    header h1 { font-size: 24px; color: #00bcd4; letter-spacing: 2px; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+    header nav a:hover { color: #00bcd4; }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Hero Section */
+    #home {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      text-align: center;
+    }
+    #home h2 { font-size: 48px; color: #00bcd4; }
+    #home h3 { font-size: 24px; margin: 10px 0; }
+    #home p { margin: 20px 0; color: #ccc; }
+    #home button {
+      background: #00bcd4;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    #home button:hover { background: #008c9e; }
+
+    /* About */
+    #about {
+      background: #111;
+    }
+    #about h2 { color: #00bcd4; margin-bottom: 20px; }
+    #about p { max-width: 800px; color: #ccc; }
+
+    /* Skills */
+    #skills {
+      background: #0d0d0d;
+    }
+    #skills h2 { color: #00bcd4; margin-bottom: 30px; }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill {
+      background: #1a1a1a;
+      padding: 15px 25px;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+    .skill:hover { transform: scale(1.1); background: #00bcd4; color: #000; }
+
+    /* Projects */
+    #projects {
+      background: #111;
+    }
+    #projects h2 { color: #00bcd4; margin-bottom: 30px; }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .project {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .project:hover { transform: translateY(-10px); }
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .project h3 { color: #00bcd4; margin-bottom: 10px; }
+
+    /* Contact */
+    #contact {
+      background: #0d0d0d;
+      text-align: center;
+    }
+    #contact h2 { color: #00bcd4; margin-bottom: 20px; }
+    #contact p { color: #ccc; }
+    .socials a {
+      color: #00bcd4;
+      margin: 0 10px;
+      font-size: 22px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .socials a:hover { color: #fff; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 20px; }
+      #home h2 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gourav</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Hi, I'm <span style="color:#fff;">Gourav</h2>
+    <h3>I'm a Web Developer</h3>
+    <p>I build modern, responsive, and user-friendly web applications.</p>
+    <button onclick="window.location='#projects'">View My Work</button>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate Web Developer with experience in creating high-quality,
+      responsive websites and web apps. I love solving problems and bringing
+      creative ideas to life through clean, efficient code.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1">
+        <h3>Project One</h3>
+        <p>A modern responsive website built with React and Tailwind CSS.</p>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2">
+        <h3>Project Two</h3>
+        <p>Full-stack web app using Node.js, Express, and MongoDB.</p>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3">
+        <h3>Project Three</h3>
+        <p>Portfolio website with animations and modern design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's work together or just say hello 👋</p>
+    <div class="socials">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="mailto:youremail@example.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Gourav | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
